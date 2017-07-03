@@ -1,0 +1,30 @@
+.nav-page {
+    height: 150px;
+    background-color: #2ECC71;
+}
+.label {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: 5px;
+}
+.list-group-item {
+    margin-bottom: 15px;
+}
+.push-article {
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid gainsboro;
+    margin-bottom: 15px;
+}
+.push-item {
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 15px;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 15px;
+    cursor: pointer;
+}
