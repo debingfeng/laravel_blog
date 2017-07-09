@@ -96,7 +96,7 @@
                                Web前端
                                 <span class="badge">14</span>
                             </a>
-                            <a href="#" class="list-group-item">PHP</a>
+                            <a href="#" class="list-group-item">PHP<span class="badge">14</span></a>
                             <a href="#" class="list-group-item">Node.js</a>
                             <a href="#" class="list-group-item">数据库</a>
                             <a href="#" class="list-group-item">服务器运维与</a>

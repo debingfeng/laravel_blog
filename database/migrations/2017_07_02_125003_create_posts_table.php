@@ -16,11 +16,13 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('category_id')->comment('类型Id');
             $table->string('slug')->unique();
             $table->string('title',120);
             $table->text('content');
-            $table->text('origin_content')->nullable();
+            $table->text('markdown')->nullable();
             $table->timestamps();
+            $table->softDeletes();
             $table->timestamp('published_at')->default(DB::raw('CURRENT_TIMESTAMP'))->index();
         });
     }

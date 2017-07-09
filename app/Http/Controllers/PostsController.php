@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class PostsController extends Controller
@@ -14,6 +16,10 @@ class PostsController extends Controller
     public function index()
     {
         //
+        $posts = Post::where('published_at', '<=', Carbon::now())
+            ->orderBy('published_at', 'desc')
+            ->paginate(config('blog.posts_per_page'));
+        return view('post.index', compact('posts'));
     }
 
     /**
@@ -24,6 +30,7 @@ class PostsController extends Controller
     public function create()
     {
         //
+        return view('post.add');
     }
 
     /**
@@ -35,6 +42,12 @@ class PostsController extends Controller
     public function store(Request $request)
     {
         //
+        $this->validate($request, [
+            'title' => 'required|unique:posts|max:255',
+            'category_id' => 'required',
+        ]);
+        Post::create($request->input());
+        return redirect(route('posts.index'));
     }
 
     /**
@@ -46,6 +59,8 @@ class PostsController extends Controller
     public function show($id)
     {
         //
+        $data = Post::find($id);
+        return view('post.show',['data'=>$data]);
     }
 
     /**
