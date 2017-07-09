@@ -1,0 +1,1 @@
+resources/views/category.blade.php

@@ -20,7 +20,7 @@ class PostTableSeeder extends Seeder
 {
     public function run()
     {
-        App\Post::truncate();
-        factory(App\Post::class, 20)->create();
+        App\Posts::truncate();
+        factory(App\Posts::class, 20)->create();
     }
 }

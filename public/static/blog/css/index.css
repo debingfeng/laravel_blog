@@ -9,8 +9,17 @@
     text-align: center;
     margin: 5px;
 }
+.status-section {
+    height: 50px;
+    background-color: transparent;
+}
+.content-section {
+    background-color: white;
+    padding: 15px;
+    min-height: 900px;
+}
 .list-group-item {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 .push-article {
     height: 45px;
@@ -28,3 +37,4 @@
     border-radius: 15px;
     cursor: pointer;
 }
+
