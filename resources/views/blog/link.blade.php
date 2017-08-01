@@ -1,1 +1,0 @@
-resources/views/link.blade.php
